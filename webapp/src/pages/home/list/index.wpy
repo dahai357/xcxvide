@@ -1,0 +1,66 @@
+<!--
+ * @Version: v1.5.0
+ * @Author: 汪洋
+ * @Date: 2020-08-13 10:08:22
+ * @LastEditTime: 2020-08-13 11:53:04
+-->
+<style lang="less" scoped>
+  // .userinfo {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+
+  // .userinfo-avatar {
+  //   width: 80rpx;
+  //   height: 80rpx;
+  //   border-radius: 50%;
+  // }
+
+  // .userinfo-nickname {
+  //   color: #aaa;
+  // }
+</style>
+<template>
+  <view class="container">
+    测试接口请求
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  // import http from '$/http'
+  export default class extends wepy.page {
+    config = {
+      navigationBarTitleText: 'test'
+    }
+    components = {
+
+    }
+
+    // mixins = [testMixin]
+
+    data = {
+      
+    }
+
+    computed = {
+     
+    }
+
+    methods = {
+     
+     
+    }
+
+    events = {
+
+    }
+
+   async onLoad() {
+       console.log('res1111111111')
+     const res= await wepy.$axios('get','todayVideo')
+     console.log(res,'res')
+    }
+  }
+</script>
